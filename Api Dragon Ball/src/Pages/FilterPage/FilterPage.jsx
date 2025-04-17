@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import CustomCard from '../../components/CustomCard/CustomCard';
+import CustomCard from '../../Components/CustomCard/CustomCard';
 
 const FilterPage = () => {
   const { especie } = useParams(); // Será "Male" o "Female"

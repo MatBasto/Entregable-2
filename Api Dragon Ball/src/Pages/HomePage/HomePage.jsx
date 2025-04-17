@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import CustomCard from '../../components/CustomCard/CustomCard';
+import CustomCard from '../../Components/CustomCard/CustomCard';
 
 const HomePage = () => {
   const [data, setData] = useState([]);

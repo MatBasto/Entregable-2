@@ -17,7 +17,7 @@ const AboutPage = () => {
       <Typography className="about-line"><strong>Universidad:</strong> Universidad de la Amazonia</Typography>
 
       <Typography className="about-desc">
-        Esta aplicación fue desarrollada en equipo como parte del curso de Programación Web, utilizando React, Vite, Material UI y la API pública de personajes de Dragon Ball. El objetivo fue crear una app moderna, funcional y visualmente atractiva.
+        Esta aplicación fue desarrollada en equipo como parte del curso de Programación Web, utilizando React, Vite, Material UI y la API pública de personajes de Dragon Ball.
       </Typography>
     </Box>
   );
