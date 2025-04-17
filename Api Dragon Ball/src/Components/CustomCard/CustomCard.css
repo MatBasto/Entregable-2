@@ -1,0 +1,112 @@
+.card-character {
+  width: 250px;
+  background-color: #2b2b31;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 1rem;
+  position: relative;
+  z-index: 0;
+  background-image: url('https://plus.unsplash.com/premium_photo-1663047540698-12e93c082dda?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhY2UlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+}
+
+.card-character:hover {
+  transform: perspective(800px) rotateX(5deg) rotateY(-5deg);
+}
+
+.image-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://pbs.twimg.com/media/DywTix2WoAAxJWA.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: visible;
+  z-index: 1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.2s ease, filter 0.3s ease;
+  will-change: transform;
+}
+
+.card-image:hover {
+  transform: scale(1.3) rotateX(8deg) rotateY(-8deg);
+  filter: brightness(1.25) drop-shadow(0 10px 15px rgba(0,0,0,1.5));
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+}
+
+.card-name {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px #f57f17, 0 0 10px rgba(255, 235, 59, 0.8);
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0.7rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.card-name:hover {
+  color: #fff176;
+  transform: scale(1.08) rotate(-1deg);
+  text-shadow: 2px 2px 8px #ff9800, 0 0 15px rgba(255, 235, 59, 1);
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #222;
+  margin: 0.4rem 0;
+  font-family: 'Orbitron', sans-serif;
+  background: rgba(58, 58, 58, 0.1);
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.card-text:hover {
+  background: rgba(255, 140, 0, 0.2);
+}
+
+.card-text strong {
+  color: #d32f2f;
+  font-weight: bold;
+  margin-right: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  color: #ff9800;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 0 2px #fff000;
+}
+
+.card-detail {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fafafa;
+  border: 2px solid #ddd;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}

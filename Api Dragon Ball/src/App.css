@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-image: url('https://i.pinimg.com/736x/4a/59/af/4a59afd1840239257cee7fde6d4e734d.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+main {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 1;
+}

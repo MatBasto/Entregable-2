@@ -1,0 +1,25 @@
+.custom-header {
+  background-image: url('https://www.clementoni.com/media/prod/dk/39486/dragon-ball-1000-pcs-panorama-puzzle_tX81MhI.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 320px;
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 3));
+}
+
+.subtitulo {
+  font-weight: 500;
+  text-shadow: 2px 2px 5px black;
+}

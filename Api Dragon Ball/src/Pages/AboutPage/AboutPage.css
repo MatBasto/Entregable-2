@@ -1,0 +1,28 @@
+.about-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(to right, #fff5e1, #ffe1d6);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.about-title {
+  color: #d32f2f;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.about-line {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-desc {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
