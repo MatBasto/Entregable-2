@@ -25,13 +25,13 @@ const CustomCard = ({ user, isDetail = false }) => {
               <strong>Género:</strong> <span className="highlight">{String(user.gender || 'No especificado')}</span>
             </p>
             <p className="card-text">
-              <strong>Planeta de origen:</strong> <span className="highlight">{String(user.originPlanet || 'Desconocido')}</span>
-            </p>
-            <p className="card-text">
               <strong>Ki:</strong> <span className="highlight">{String(user.ki || 'Desconocido')}</span>
             </p>
             <p className="card-text">
-              <strong>Descripción:</strong> <span className="highlight">{typeof user.description === 'object' ? JSON.stringify(user.description) : String(user.description || 'No disponible')}</span>
+              <strong>Especie:</strong> <span className="highlight">{String(user.affiliation || 'Desconocida')}</span>
+            </p>
+            <p className="card-text">
+              <strong>Estado:</strong> <span className="highlight">{user.isDestroyed ? 'Destruido' : 'Vivo'}</span>
             </p>
           </>
         )}
