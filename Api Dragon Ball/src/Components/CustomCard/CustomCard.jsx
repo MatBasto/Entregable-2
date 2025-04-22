@@ -28,7 +28,7 @@ const CustomCard = ({ user, isDetail = false }) => {
               <strong>Ki:</strong> <span className="highlight">{String(user.ki || 'Desconocido')}</span>
             </p>
             <p className="card-text">
-              <strong>Especie:</strong> <span className="highlight">{String(user.affiliation || 'Desconocida')}</span>
+              <strong>Afiliacion:</strong> <span className="highlight">{String(user.affiliation || 'Desconocida')}</span>
             </p>
             <p className="card-text">
               <strong>Estado:</strong> <span className="highlight">{user.isDestroyed ? 'Destruido' : 'Vivo'}</span>

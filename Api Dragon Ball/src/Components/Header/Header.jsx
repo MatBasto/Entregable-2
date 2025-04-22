@@ -11,7 +11,7 @@ const Header = () => {
         className="logo-img"
       />
       <Typography variant="h5" className="subtitulo" sx={{ mt: 2 }}>
-        The Dragon Ball API
+      <strong>The Dragon Ball</strong> <span className="highlight">API</span>
       </Typography>
     </Box>
   );
