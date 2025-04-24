@@ -12,6 +12,7 @@ const DetailsPage = () => {
 
   useEffect(() => {
     setLoading(true);
+    
     fetch(`https://dragonball-api.com/api/characters/${id}`)
       .then(response => {
         if (!response.ok) {
@@ -20,7 +21,7 @@ const DetailsPage = () => {
         return response.json();
       })
       .then(json => {
-        console.log("Datos recibidos:", json); // Para depuración
+        console.log("Datos recibidos:", json);
         setData(json);
         setLoading(false);
       })

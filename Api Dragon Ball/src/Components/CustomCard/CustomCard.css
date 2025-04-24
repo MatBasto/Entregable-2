@@ -110,3 +110,95 @@
   border: 2px solid #ddd;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
+
+/* Estilos para el carrusel dentro de la tarjeta */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  background-color: rgba(255, 140, 0, 0.8);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 20;
+  outline: none;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 108, 0, 1);
+  transform: scale(1.1);
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  z-index: 15;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background-color: rgba(255, 140, 0, 0.8);
+}
+
+.indicator.active {
+  background-color: #ffcc00;
+  transform: scale(1.2);
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+  
+  .card-detail {
+    max-width: 90%;
+  }
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import React, { useEffect } from 'react';
+import { Box, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './ErrorPage.css';
 
@@ -13,23 +13,45 @@ const dragonBall7 = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c
 
 const dragonBalls = [dragonBall1, dragonBall2, dragonBall3, dragonBall4, dragonBall5, dragonBall6, dragonBall7];
 
-
 const ErrorPage = () => {
+  useEffect(() => {
+    // Ocultar todos los elementos de la página
+    document.body.style.overflow = 'hidden';
+    
+    // Opcional: Esconder el header, navbar y footer si están fuera del router
+    const header = document.querySelector('header');
+    const navbar = document.querySelector('nav');
+    const footer = document.querySelector('footer');
+    
+    if (header) header.style.display = 'none';
+    if (navbar) navbar.style.display = 'none';
+    if (footer) footer.style.display = 'none';
+    
+    return () => {
+      // Restaurar todo al desmontar
+      document.body.style.overflow = 'auto';
+      
+      if (header) header.style.display = '';
+      if (navbar) navbar.style.display = '';
+      if (footer) footer.style.display = '';
+    };
+  }, []);
+
   return (
-    <Container className="error-container">
+    <Box className="error-container">
       <Box className="dragon-balls-container">
-      {[1, 2, 3, 4, 5, 6, 7].map((star) => (
-        <div key={star} className={`dragon-ball star-${star}`}>
-          <div className="stars">
-            <img 
-              src={dragonBalls[star-1]} 
-              alt={`Dragon Ball ${star}`} 
-              className="dragon-ball-image" 
-            />
+        {[1, 2, 3, 4, 5, 6, 7].map((star) => (
+          <div key={star} className={`dragon-ball star-${star}`}>
+            <div className="stars">
+              <img 
+                src={dragonBalls[star-1]} 
+                alt={`Dragon Ball ${star}`} 
+                className="dragon-ball-image" 
+              />
+            </div>
           </div>
-        </div>
-      ))}
-    </Box>
+        ))}
+      </Box>
       
       <Box className="error-content">
         <Typography variant="h2" className="error-title">
@@ -61,7 +83,7 @@ const ErrorPage = () => {
           Volver al inicio
         </Button>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

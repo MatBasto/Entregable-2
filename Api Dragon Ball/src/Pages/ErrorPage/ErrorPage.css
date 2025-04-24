@@ -1,10 +1,19 @@
 .error-container {
   background-image: url('https://pbs.twimg.com/media/EOtm5ACWsAI0JKt?format=jpg&name=large');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: fixed;
   color: white;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  margin: 0;
+  padding: 0;
 }
 
 .error-container::before {
