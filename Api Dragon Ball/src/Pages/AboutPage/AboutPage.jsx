@@ -1,24 +1,91 @@
 import React from 'react';
-import { Box, Typography, Divider } from '@mui/material';
+import { Box, Typography, Grid, Paper, Avatar, Divider, Link } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import './AboutPage.css';
 
 const AboutPage = () => {
+  const developers = [
+    {
+      name: "Mateo Augusto Basto Olaya",
+      email: "mat.basto@udla.edu.co",
+      avatar: "https://i.pinimg.com/736x/91/6d/01/916d0141ef345c2751e7b9ff53057c5e.jpg",
+      role: "Full Stack Developer",
+      github: "https://github.com/MatBasto" 
+    },
+    {
+      name: "Damary Andrea Montealegre Caldon",
+      email: "da.montealegre@udla.edu.co",
+      avatar: "https://cdn-images.dzcdn.net/images/cover/b4af33141c6e362e4f10790c35b912e0/500x500-000000-80-0-0.jpg",
+      role: "Full Stack Developer",
+      github: "https://github.com/AndreMC12"
+    }
+  ];
+
+  const handleCardClick = (githubUrl) => {
+    window.open(githubUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <Box className="about-container">
       <Typography variant="h4" className="about-title" gutterBottom>
-        Acerca de
+        Acerca del Proyecto
       </Typography>
-
-      <Divider sx={{ mb: 2, backgroundColor: '#ff8c00' }} />
-
-      <Typography className="about-line"><strong>Nombres:</strong> Mateo Augusto Basto Olaya y Damary Andrea Montealegre Caldon</Typography>
-      <Typography className="about-line"><strong>Correos:</strong> mat.basto@udla.edu.co - da.montealegre@udla.edu.co</Typography>
-      <Typography className="about-line"><strong>Carrera:</strong> Ingeniería de Sistemas</Typography>
-      <Typography className="about-line"><strong>Universidad:</strong> Universidad de la Amazonia</Typography>
-
-      <Typography className="about-desc">
-        Esta aplicación fue desarrollada en equipo como parte del curso de Programación Web, utilizando React, Vite, Material UI y la API pública de personajes de Dragon Ball.
+      
+      <Divider sx={{ mb: 4, backgroundColor: '#ff8c00' }} />
+      
+      <Typography variant="body1" className="about-description" paragraph>
+        Esta aplicación web fue desarrollada como parte del curso de Programación Web 
+        en la Universidad de la Amazonia para el programa de Ingeniería de Sistemas, 
+        utilizando React, Vite, Material UI y la API pública de personajes de Dragon Ball.
       </Typography>
+      
+      <Typography variant="h5" className="team-title" gutterBottom sx={{ mt: 4, mb: 3 }}>
+        Nuestro Equipo
+      </Typography>
+      
+      <Grid container spacing={4} justifyContent="center">
+        {developers.map((dev, index) => (
+          <Grid item xs={12} sm={6} md={5} key={index}>
+            <Paper 
+              elevation={6} 
+              className="dev-card"
+              onClick={() => handleCardClick(dev.github)}
+            >
+              <div className="dragon-ball-circle"></div>
+              <Avatar 
+                src={dev.avatar} 
+                alt={dev.name}
+                className="dev-avatar"
+              />
+              <Typography variant="h6" className="dev-name">
+                {dev.name}
+              </Typography>
+              <Typography variant="body2" className="dev-role">
+                {dev.role}
+              </Typography>
+              <Typography variant="body2" className="dev-email">
+                {dev.email}
+              </Typography>
+              
+              <Box className="github-link">
+                <GitHubIcon fontSize="small" sx={{ mr: 1 }} />
+                <Typography variant="body2">Ver perfil de GitHub</Typography>
+              </Box>
+              
+              <div className="card-border"></div>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
+      
+      <Box className="university-info" sx={{ mt: 5 }}>
+        <Typography variant="subtitle1">
+          Universidad de la Amazonia
+        </Typography>
+        <Typography variant="subtitle2">
+          Ingeniería de Sistemas
+        </Typography>
+      </Box>
     </Box>
   );
 };
