@@ -33,7 +33,7 @@ const AboutPage = () => {
       </Typography>
       
       <Typography variant="h5" className="team-title" gutterBottom sx={{ mt: 4, mb: 3 }}>
-        Nuestro Equipo
+        Creador de la pagina
       </Typography>
       
       <Grid container spacing={4} justifyContent="center">
