@@ -46,10 +46,9 @@ npm (versión 6.0.0 o superior)
 https://dragonball-api.com/api/characters - Lista de personajes
 https://dragonball-api.com/api/characters/:id - Detalles de un personaje específico
 
-👥 Desarrolladores
+👥 Desarrollador
 
 Mateo Augusto Basto Olaya - mat.basto@udla.edu.co
-Damary Andrea Montealegre Caldon - da.montealegre@udla.edu.co
 
 🏫 Proyecto Académico
 Desarrollado como parte del curso de Programación Web en la Universidad de la Amazonia, programa de Ingeniería de Sistemas.
