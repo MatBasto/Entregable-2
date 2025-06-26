@@ -11,13 +11,6 @@ const AboutPage = () => {
       avatar: "https://i.pinimg.com/736x/91/6d/01/916d0141ef345c2751e7b9ff53057c5e.jpg",
       role: "Full Stack Developer",
       github: "https://github.com/MatBasto" 
-    },
-    {
-      name: "Damary Andrea Montealegre Caldon",
-      email: "da.montealegre@udla.edu.co",
-      avatar: "https://cdn-images.dzcdn.net/images/cover/b4af33141c6e362e4f10790c35b912e0/500x500-000000-80-0-0.jpg",
-      role: "Full Stack Developer",
-      github: "https://github.com/AndreMC12"
     }
   ];
 
